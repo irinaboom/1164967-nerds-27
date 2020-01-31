@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>HTML Academy: Нёрдс</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header> 
@@ -24,7 +25,7 @@
   </div>
 </header>
 <main> 
-  <h1>Нёрдс</h1> <!-- class: visually-hidden-->
+  <h1 class="visually-hidden">Нёрдс</h1> <!-- class: visually-hidden-->
 	<section>
 		<p>Долго, дорого,<br>скрупулезно.</p>
 		<p>Математически выверенный дизайн<br>
@@ -35,7 +36,7 @@
 	</section>
 	
   <section>
-    <h2>Виды наших работ</h2> <!-- class: visually-hidden-->
+    <h2 class="visually-hidden">Виды наших работ</h2> <!-- class: visually-hidden-->
     <ul>
       <li>
 				<img src="img/illustration-1.jpg" width="300" height="146" alt="Веб-сайты">
@@ -91,7 +92,7 @@
 	</section>
 	
 	<section>
-		<h2>Партнёры</h2> <!-- class: visually-hidden-->
+		<h2 class="visually-hidden">Партнёры</h2> <!-- class: visually-hidden-->
 		<ul>
       <li>
 				<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-html-academy.png" width="199" height="68" alt="HTML Academy"></a>
@@ -111,7 +112,7 @@
 	<section>
 		<!-- Блок Адрес студии: карта-->
 		<div>
-			<img src="img/map.png" width="1440" height="416" alt="Как проехать" >
+			<img src="img/map.png" width="1440" height="416" alt="Офис компании по адресу: 191186, Санкт-Петербург,	ул. Б. Конюшенная, д. 19/8" >
 			<img src="img/map-marker.png" width="231" height="190" alt="Метка студии на карте" >
 		</div>
 		<!-- Блок Адрес студии -->
@@ -127,11 +128,34 @@
 			<!-- Напишите нам -->
       <button type="button">Напишите нам</button>
 			<!-- Здесь будет форма -->
+			<form action="https://echo.htmlacademy.ru/courses" method="post" oninput="triprating.value=rating.value">
+        <fieldset>
+          <legend>Напишите нам</legend>
+          <div class="half-width">
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" value="" placeholder="Имя Фамилия" required>
+          </div>
+					<div class="half-width">
+            <label for="email">Ваш e-mail:</label>
+            <input type="email" id="email" name="email" placeholder="email@example.com" required>
+          </div>
+					<div>
+						<label for="letter">Текст письма:</label>
+						<textarea rows="5" id="letter" name="letter" placeholder="В свободной форме" required></textarea>
+					</div>
+        </fieldset>
+				<div>
+          <input type="submit" value="Отправить">
+        </div>
+			</form>
+			<button type="button">
+      	Закрыть
+      </button>
 		</div>
 	</section>
 </main>
 <footer>
-  <h2>Нёрдс в социальных сетях</h2> <!-- class: visually-hidden-->
+  <h2 class="visually-hidden">Нёрдс в социальных сетях</h2> <!-- class: visually-hidden-->
   <ul>
     <li><a href="#">Вконтакте</a></li>
     <li><a href="#">Фейсбук</a></li>

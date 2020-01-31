@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>HTML Academy: Нёрдс</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header> 
@@ -26,7 +27,7 @@
 <main>
   <h1>Магазин готовых шаблонов</h1>
   <section> <!-- Фильтры class: filter-->
-    <h2>Фильтры наших работ</h2> <!-- class: visually-hidden-->
+    <h2 class="visually-hidden">Фильтры наших работ</h2> <!-- class: visually-hidden-->
 
 		<!-- Фильтр стоимости -->
 		<div>
@@ -34,19 +35,74 @@
 			<!-- Здесь будет форма -->
 		</div>
 			
-		<!-- Фильтр по сеткам -->
 		<div>
-    	<h3>Сетка</h3> 
-    	<!-- Здесь будет форма -->
+			<form class="filter" method="get" action="https://echo.htmlacademy.ru">
+				<!-- Фильтр по сеткам -->
+				<fieldset>
+					<legend>Сетка:</legend>
+					<ul>
+						<li>
+							<input type="radio" name="product-group" value="adaptive" id="filter-adaptive" checked>
+							<label for="filter-adaptive">
+								Адаптивная
+							</label>
+						</li>
+						<li>
+							<input type="radio" name="product-group" value="fixed" id="filter-fixed">
+							<label for="filter-fixed">
+								Фиксированная
+							</label>
+						</li>
+						<li>
+							<input type="radio" name="product-group" value="rubber" id="filter-rubber">
+							<label for="filter-rubber">
+								Резиновая
+							</label>
+						</li>
+					</ul>
+				</fieldset>
+				
+				<!-- Фильтр по особенностям -->
+				<fieldset>
+					<legend>Особенности:</legend>
+					<ul>
+						<li>
+							<input type="checkbox" name="slider" id="filter-sliders" checked>
+							<label for="filter-slider">
+								Слайдер
+							</label>
+						</li>
+						<li>
+							<input type="checkbox" name="unit-advantages" id="filter-unit-advantages">
+							<label for="filter-unit-advantages">
+								Блок преимуществ
+							</label>
+						</li>
+						<li>
+							<input type="checkbox" name="news" id="filter-news" checked>
+							<label for="filter-news">
+								Новости
+							</label>
+						</li>
+						
+						<li>
+							<input type="checkbox" name="gallery" id="filter-gallery">
+							<label for="filter-gallery">
+								Галерея
+							</label>
+						</li>
+						<li>
+							<input type="checkbox" name="basket" id="filter-basket">
+							<label for="filter-basket">
+								Корзина
+							</label>
+						</li>
+					</ul>
+				</fieldset>
+				
+      	<button type="submit">Показать</button> <!-- кнопка «Показать» отвечает за отправку формы по ТЗ-->
+    	</form>
 		</div>
-		
-		<!-- Фильтр по особенностям -->
-		<div>
-    	<h3>Особенности</h3>
-			<!-- Здесь будет форма -->
-		</div>
-			
-    <button type="button">Показать</button> <!-- кнопка «Показать» отвечает за отправку формы по ТЗ-->
   </section>
 	
   <section> <!-- Каталог class: catalog -->
@@ -55,7 +111,7 @@
 			<h3>Сортировать</h3>
 			<!-- Здесь будет форма -->
 		</div>
-    <h2>Каталог наших работы</h2> <!-- class: visually-hidden-->
+    <h2 class="visually-hidden">Каталог наших работы</h2> <!-- class: visually-hidden-->
     <ul>
       <li> <!-- class: catalog-item--> 
         <a href="#"> 
@@ -118,7 +174,7 @@
 	<section>
 		<!-- Блок Адрес студии: карта-->
 		<div>
-			<img src="img/map.png" width="1440" height="416" alt="Как проехать" >
+			<img src="img/map.png" width="1440" height="416" alt="Офис компании по адресу: 191186, Санкт-Петербург,	ул. Б. Конюшенная, д. 19/8" >
 			<img src="img/map-marker.png" width="231" height="190" alt="Метка студии на карте" >
 		</div>
 		<!-- Блок Адрес студии -->
@@ -134,11 +190,34 @@
 			<!-- Напишите нам -->
       <button type="button">Напишите нам</button>
 			<!-- Здесь будет форма -->
+			<form action="https://echo.htmlacademy.ru/courses" method="post" oninput="triprating.value=rating.value">
+        <fieldset>
+          <legend>Напишите нам</legend>
+          <div class="half-width">
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" value="" placeholder="Имя Фамилия" required>
+          </div>
+					<div class="half-width">
+            <label for="email">Ваш e-mail:</label>
+            <input type="email" id="email" name="email" placeholder="email@example.com" required>
+          </div>
+					<div>
+						<label for="letter">Текст письма:</label>
+						<textarea rows="5" id="letter" name="letter" placeholder="В свободной форме" required></textarea>
+					</div>
+        </fieldset>
+				<div>
+          <input type="submit" value="Отправить">
+        </div>
+			</form>
+			<button type="button">
+      	Закрыть
+      </button>
 		</div>
 	</section>	
 </main>
 <footer>
-  <h2>Нёрдс в социальных сетях</h2> <!-- class: visually-hidden-->
+  <h2 class="visually-hidden">Нёрдс в социальных сетях</h2> <!-- class: visually-hidden-->
   <ul>
     <li><a href="#">Вконтакте</a></li>
     <li><a href="#">Фейсбук</a></li>
