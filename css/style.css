@@ -1,17 +1,19 @@
 @charset "utf-8";
 /* CSS Document */
 
-/*
 @font-face {
   font-family: "Roboto", sans-serif;
-  src: url("fonts/roboto.woff") format("woff");
+  src: url("fonts/roboto.woff") format("woff"),
+			 url("fonts/roboto.woff2") format("woff2"),
+			 url("fonts/robotobold.woff") format("woff"),
+			 url("fonts/robotobold.woff2") format("woff2"),
+			 url("fonts/robotomedium.woff") format("woff"),
+			 url("fonts/robotomedium.woff2") format("woff2");
+	font-weight: normal, /*400*/
+							 medium, /*500*/
+							 bold;   /*700*/
+	font-style: normal;
 }
-
-body {
-  font-size: 12px;
-  font-family: "Roboto", sans-serif;
-}
- */
 
 .visually-hidden {
   position: absolute;
@@ -24,3 +26,460 @@ body {
   overflow: hidden;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+	font-weight: normal;
+  line-height: 24px;
+  color: #000000;
+	
+	background-color: #ffffff;
+}
+
+img { 
+	max-width: 100% 
+}
+
+/* HEADER*/
+header {
+	background-color: #eeeeee;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-navigation, .basket {
+  font-size: 16px;
+	font-weight: 500;
+  line-height: 30px;
+  color: #000000;
+	text-transform: uppercase; 
+
+  background-color: #eeeeee;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a,
+.basket a {
+  color: #000000;
+}
+
+.site-navigation a:link,
+.basket a:link
+{ /*Определяет стиль для обычной непосещенной ссылки*/
+	color: #000000;
+}
+
+.site-navigation a:visited,
+.basket a:visited { /*Определяет стиль для посещенной ссылки*/
+	color: #000000;
+}
+
+.site-navigation a:hover,
+.basket a:hover { /*Определяет стиль для ссылки при наведении на нее мышью*/
+	color: #fb565a;
+}
+
+.site-navigation a:active,
+.basket a:active { /*Определяет стиль для активной ссылки. Активной ссылка становится при нажатии на нее*/
+	color: #000000;
+	opacity: 0.3;
+}
+
+.site-navigation a:focus,
+.basket a:focus {
+	color: #000000;
+	opacity: 0.3;
+}
+
+ .site-navigate-current a {
+	color: #000000;
+	border-bottom: solid 2px #fb565a; 
+}
+
+h1 { 
+	font-size: 55px;
+	font-weight: 500; /*medium*/
+  line-height: 55px;
+  color: #000000;
+	
+	text-align: center;
+}
+
+h2 { 
+	font-family: inherit;
+	font-size: 24px;
+	font-weight: bold;
+  line-height: 30px;
+  color: #000000;
+	text-transform: uppercase; 
+	
+	text-align: left;
+}
+
+h3 { 
+	font-family: inherit;
+	font-size: 18px;
+	font-weight: bold;
+  line-height: 30px;
+  color: #000000;
+	text-transform: uppercase; 
+	
+	text-align: left;	
+}
+
+/* MAIN */
+.button {
+	font: inherit;
+	font-size: 16px;
+	font-weight: 500;
+  line-height: 18px;
+  color: #ffffff;
+  vertical-align: middle;
+	text-align: center;
+  text-transform: uppercase;
+
+  background-color: #fb565a;
+  border: none;
+}
+
+.button:hover {
+	font: inherit;
+	font-size: 16px;
+	font-weight: 500;
+  line-height: 18px;
+  color: #ffffff;
+  vertical-align: middle;
+	text-align: center;
+  text-transform: uppercase;
+
+  background-color: #e74246;
+  border: none;
+}
+
+.button:active {
+	font: inherit;
+	font-size: 16px;
+	font-weight: 500;
+  line-height: 18px;
+  color: #ffffff;
+  vertical-align: middle;
+	text-align: center;
+  text-transform: uppercase;
+
+  background-color: #d7373b;
+  border: none;
+}
+
+.features-list {
+	list-style: none;
+}
+
+.features-item {
+  text-align: left;
+}
+
+/*.features-list li:nth-child(1) a {
+	font: inherit;
+	font-size: 16px;
+	font-weight: 500;
+  line-height: 18px;
+  color: #ffffff;
+  vertical-align: middle;
+	text-align: center;
+  text-transform: uppercase;
+
+  background-color: #fb565a;
+  border: none;
+}*/
+
+.features-list li:nth-child(2) a {
+	font: inherit;
+	font-size: 16px;
+	font-weight: 500;
+  line-height: 18px;
+  color: #ffffff;
+  vertical-align: middle;
+	text-align: center;
+  text-transform: uppercase;
+
+  background-color: #00ca74;
+  border: none;
+}
+
+.features-list li:nth-child(2) a:hover {
+	font: inherit;
+	font-size: 16px;
+	font-weight: 500;
+  line-height: 18px;
+  color: #ffffff;
+  vertical-align: middle;
+	text-align: center;
+  text-transform: uppercase;
+
+  background-color: #00bc6c;
+  border: none;
+}
+
+.features-list li:nth-child(2) a:active {
+	font: inherit;
+	font-size: 16px;
+	font-weight: 500;
+  line-height: 18px;
+  color: #ffffff;
+  vertical-align: middle;
+	text-align: center;
+  text-transform: uppercase;
+
+  background-color: #00aa62;
+  border: none;
+}
+
+.features-list li:nth-child(3) a {
+	font: inherit;
+	font-size: 16px;
+	font-weight: 500;
+  line-height: 18px;
+  color: #ffffff;
+  vertical-align: middle;
+	text-align: center;
+  text-transform: uppercase;
+
+  background-color: #efc84a;
+  border: none;
+}
+
+.features-list li:nth-child(3) a:hover {
+	font: inherit;
+	font-size: 16px;
+	font-weight: 500;
+  line-height: 18px;
+  color: #ffffff;
+  vertical-align: middle;
+	text-align: center;
+  text-transform: uppercase;
+
+  background-color: #eab534;
+  border: none;
+}
+
+.features-list li:nth-child(3) a:active {
+	font: inherit;
+	font-size: 16px;
+	font-weight: 500;
+  line-height: 18px;
+  color: #ffffff;
+  vertical-align: middle;
+	text-align: center;
+  text-transform: uppercase;
+
+  background-color: #e5a722;
+  border: none;
+}
+
+/* MAIN CATALOG */
+
+/* Фильтры и сортировка */
+.filter {
+}
+
+.filter legend,
+.sorting p {
+	font: inherit;
+	font-size: 18px;
+	font-weight: bold;
+  line-height: 30px;
+  color: #000000;
+	text-align: left;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+}
+
+.filter ul,
+.sorting ul {
+	list-style: none;
+}
+
+.filter-cost,
+.filter-grid,
+.filter-features {
+	border: none;
+}
+
+.filter label { 
+  font: inherit;
+	font-size: 16px;
+  line-height: 20px;
+	color: #283136;
+}
+
+/* Кнопка Показать */
+.filter button[type="submit"] {
+ 	font: inherit;
+	font-size: 16px;
+	font-weight: 500;
+  line-height: 18px;
+  color: #000000;
+  vertical-align: middle;
+	text-align: center;
+  text-transform: uppercase;
+
+  background-color: #eeeeee;
+  border: none;
+}
+
+.filter button[type="submit"]:hover,
+.filter button[type="submit"]:focus {
+ 	font: inherit;
+	font-size: 16px;
+	font-weight: 500;
+  line-height: 18px;
+  color: #000000;
+  vertical-align: middle;
+	text-align: center;
+  text-transform: uppercase;
+
+  background-color: #dfdfdf;
+  border: none;
+}
+
+.filter button[type="submit"]:active {
+ 	font: inherit;
+	font-size: 16px;
+	font-weight: 500;
+  line-height: 18px;
+  color: #000000;
+  vertical-align: middle;
+	text-align: center;
+  text-transform: uppercase;
+
+  background-color: #d5d5d5;
+  border: none;
+}
+
+.sorting ul a {
+	font: inherit;
+	font-size: 14px;
+	font-weight: normal;
+  line-height: 18px;
+  color: #000000;
+	opacity: 0.3;
+  text-transform: uppercase;
+}
+
+.sorting ul a:hover,
+.sorting ul a:focus {
+	font: inherit;
+	font-size: 14px;
+	font-weight: normal;
+  line-height: 18px;
+  color: #000000;
+	opacity: 0.6;
+  text-transform: uppercase;
+}
+
+.sorting ul a:active,
+.sorting-navigate-current {
+	font: inherit;
+	font-size: 14px;
+	font-weight: normal;
+  line-height: 18px;
+  color: #000000;
+	opacity: 1;
+  text-transform: uppercase;
+}
+
+.catalog ul {
+  list-style: none;
+}
+
+.catalog a p {
+	color: #666666;
+}
+
+.catalog-item {
+	text-align: center;	
+}
+
+.catalog-item h3 {
+	text-align: center;	
+}
+
+.catalog-item h3:hover,
+.catalog-item h3:focus {
+	text-align: center;	
+	color: #fb565a; 
+}
+
+.catalog-item h3:active {
+	text-align: center;	
+	color: #000000;
+	opacity: 0.3;
+}
+
+.catalog-item p {
+	text-align: center;	
+}
+
+.catalog-item a .catalog-item-content:hover {
+	background-color: #eeeeee;	
+}
+
+/* FOOTER */
+
+footer ul{
+  list-style: none;
+}
+
+.footer-social ul {
+	text-align: center;
+}
+
+.social-button {
+  color: #ffffff;
+	
+	background-color: #e1e1e1;
+}
+
+.social-button:hover {
+  color: #ffffff;
+	
+	background-color: #e74246;
+}
+
+.social-button:focus {
+  color: #ffffff;
+	
+	background-color: #d7373b;
+}
+
+.footer-social {
+	text-align: left;
+}
+
+.footer-slogan p {
+	font-family: inherit;
+	font-size: 36px;
+	font-weight: bold;
+	line-height: 36px;
+	color: #000000;
+} 
+
+.footer-slogan small {
+	font-family: inherit;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 22px;
+	color: #444444;
+	}
+	
+
+	
