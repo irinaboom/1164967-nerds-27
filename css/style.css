@@ -3,15 +3,15 @@
 
 @font-face {
   font-family: "Roboto", sans-serif;
-  src: url("fonts/roboto.woff") format("woff"),
-			 url("fonts/roboto.woff2") format("woff2"),
-			 url("fonts/robotobold.woff") format("woff"),
-			 url("fonts/robotobold.woff2") format("woff2"),
-			 url("fonts/robotomedium.woff") format("woff"),
-			 url("fonts/robotomedium.woff2") format("woff2");
-	font-weight: normal, /*400*/
-							 medium, /*500*/
-							 bold;   /*700*/
+  src: url("../fonts/roboto.woff") format("woff"),
+			 url("../fonts/roboto.woff2") format("woff2"),
+			 url("../fonts/robotobold.woff") format("woff"),
+			 url("../fonts/robotobold.woff2") format("woff2"),
+			 url("../fonts/robotomedium.woff") format("woff"),
+			 url("../fonts/robotomedium.woff2") format("woff2");
+	font-weight: normal, /* 400 */
+							 500, /* medium */
+							 bold;   /* 700 */
 	font-style: normal;
 }
 
@@ -43,7 +43,7 @@ img {
 	max-width: 100% 
 }
 
-/* HEADER*/
+/* HEADER */
 header {
 	background-color: #eeeeee;
 }
@@ -72,23 +72,22 @@ a {
 }
 
 .site-navigation a:link,
-.basket a:link
-{ /*Определяет стиль для обычной непосещенной ссылки*/
+.basket a:link { /* Определяет стиль для обычной непосещенной ссылки */
 	color: #000000;
 }
 
 .site-navigation a:visited,
-.basket a:visited { /*Определяет стиль для посещенной ссылки*/
+.basket a:visited { /* Определяет стиль для посещенной ссылки */
 	color: #000000;
 }
 
 .site-navigation a:hover,
-.basket a:hover { /*Определяет стиль для ссылки при наведении на нее мышью*/
+.basket a:hover { /* Определяет стиль для ссылки при наведении на нее мышью */
 	color: #fb565a;
 }
 
 .site-navigation a:active,
-.basket a:active { /*Определяет стиль для активной ссылки. Активной ссылка становится при нажатии на нее*/
+.basket a:active { /* Определяет стиль для активной ссылки. Активной ссылка становится при нажатии на нее */
 	color: #000000;
 	opacity: 0.3;
 }
@@ -106,7 +105,7 @@ a {
 
 h1 { 
 	font-size: 55px;
-	font-weight: 500; /*medium*/
+	font-weight: 500; /* medium */
   line-height: 55px;
   color: #000000;
 	
@@ -137,9 +136,15 @@ h3 {
 
 /* MAIN */
 .button {
+	display: block;
+  /*margin: 0px auto;*/
+  padding: 10px 0px;
+  width: 160px;
+	box-sizing: content-box;
+	
 	font: inherit;
 	font-size: 16px;
-	font-weight: 500;
+  font-weight: 500;
   line-height: 18px;
   color: #ffffff;
   vertical-align: middle;
@@ -148,34 +153,16 @@ h3 {
 
   background-color: #fb565a;
   border: none;
+	border-radius: 3px;
 }
 
-.button:hover {
-	font: inherit;
-	font-size: 16px;
-	font-weight: 500;
-  line-height: 18px;
-  color: #ffffff;
-  vertical-align: middle;
-	text-align: center;
-  text-transform: uppercase;
-
+.button:hover,
+.button:focus {
   background-color: #e74246;
-  border: none;
 }
 
 .button:active {
-	font: inherit;
-	font-size: 16px;
-	font-weight: 500;
-  line-height: 18px;
-  color: #ffffff;
-  vertical-align: middle;
-	text-align: center;
-  text-transform: uppercase;
-
   background-color: #d7373b;
-  border: none;
 }
 
 .features-list {
@@ -201,6 +188,12 @@ h3 {
 }*/
 
 .features-list li:nth-child(2) a {
+	display: block;
+  /*margin: 0px auto;*/
+  padding: 10px 0px;
+  width: 160px;
+	box-sizing: content-box;
+	
 	font: inherit;
 	font-size: 16px;
 	font-weight: 500;
@@ -212,37 +205,25 @@ h3 {
 
   background-color: #00ca74;
   border: none;
+	border-radius: 3px;
 }
 
-.features-list li:nth-child(2) a:hover {
-	font: inherit;
-	font-size: 16px;
-	font-weight: 500;
-  line-height: 18px;
-  color: #ffffff;
-  vertical-align: middle;
-	text-align: center;
-  text-transform: uppercase;
-
+.features-list li:nth-child(2) a:hover,
+.features-list li:nth-child(2) a:focus {
   background-color: #00bc6c;
-  border: none;
 }
 
 .features-list li:nth-child(2) a:active {
-	font: inherit;
-	font-size: 16px;
-	font-weight: 500;
-  line-height: 18px;
-  color: #ffffff;
-  vertical-align: middle;
-	text-align: center;
-  text-transform: uppercase;
-
   background-color: #00aa62;
-  border: none;
 }
 
 .features-list li:nth-child(3) a {
+	display: block;
+  /*margin: 0px auto;*/
+  padding: 10px 0px;
+  width: 160px;
+	box-sizing: content-box;
+	
 	font: inherit;
 	font-size: 16px;
 	font-weight: 500;
@@ -254,34 +235,16 @@ h3 {
 
   background-color: #efc84a;
   border: none;
+	border-radius: 3px;
 }
 
-.features-list li:nth-child(3) a:hover {
-	font: inherit;
-	font-size: 16px;
-	font-weight: 500;
-  line-height: 18px;
-  color: #ffffff;
-  vertical-align: middle;
-	text-align: center;
-  text-transform: uppercase;
-
+.features-list li:nth-child(3) a:hover
+.features-list li:nth-child(3) a:focus {
   background-color: #eab534;
-  border: none;
 }
 
 .features-list li:nth-child(3) a:active {
-	font: inherit;
-	font-size: 16px;
-	font-weight: 500;
-  line-height: 18px;
-  color: #ffffff;
-  vertical-align: middle;
-	text-align: center;
-  text-transform: uppercase;
-
   background-color: #e5a722;
-  border: none;
 }
 
 /* MAIN CATALOG */
@@ -433,6 +396,10 @@ h3 {
 	background-color: #eeeeee;	
 }
 
+.button-price {
+	margin: 0 auto;
+}
+
 /* FOOTER */
 
 footer ul{
@@ -444,20 +411,20 @@ footer ul{
 }
 
 .social-button {
+ /* width: 79px;
+	height: 79px;*/
+	
   color: #ffffff;
 	
 	background-color: #e1e1e1;
 }
 
-.social-button:hover {
-  color: #ffffff;
-	
+.social-button:hover,
+.social-button:focus {
 	background-color: #e74246;
 }
 
-.social-button:focus {
-  color: #ffffff;
-	
+.social-button:active {
 	background-color: #d7373b;
 }
 
