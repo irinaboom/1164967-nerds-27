@@ -138,7 +138,7 @@ h3 {
 .button {
 	display: block;
   /*margin: 0px auto;*/
-  padding: 10px 0px;
+  padding: 16px 0px;
   width: 160px;
 	box-sizing: content-box;
 	
@@ -190,7 +190,7 @@ h3 {
 .features-list li:nth-child(2) a {
 	display: block;
   /*margin: 0px auto;*/
-  padding: 10px 0px;
+  padding: 16px 0px;
   width: 160px;
 	box-sizing: content-box;
 	
@@ -220,7 +220,7 @@ h3 {
 .features-list li:nth-child(3) a {
 	display: block;
   /*margin: 0px auto;*/
-  padding: 10px 0px;
+  padding: 16px 0px;
   width: 160px;
 	box-sizing: content-box;
 	
@@ -248,6 +248,10 @@ h3 {
 }
 
 /* MAIN CATALOG */
+.page-title {
+	padding-top: 85px; 
+	padding-bottom: 117px;
+}
 
 /* Фильтры и сортировка */
 .filter {
@@ -360,11 +364,11 @@ h3 {
   text-transform: uppercase;
 }
 
-.catalog ul {
+.catalog-work ul {
   list-style: none;
 }
 
-.catalog a p {
+.catalog-work a p {
 	color: #666666;
 }
 
@@ -447,6 +451,141 @@ footer ul{
 	line-height: 22px;
 	color: #444444;
 	}
-	
 
+
+/* ----- Сеточные стили ----- */
+html,
+body {
+  min-width: 1160px;
+  /*min-height: 2476px;*/
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+	padding: 0 20px;
+}
+
+/* HEADER */
+.main-header {
+	padding-top: 49px;
+}
+
+.main-navigation-wrapper {
+	display: flex;
+	flex-direction: row;
+}
+
+.logo {
+	width: 160px;
+	margin-right: 200px;
+}
+
+.main-navigation {
+	width: 440px;
+	margin-right: 200px;
+}
+
+.site-navigation {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0;
+  padding: 0;
+	padding-top: 30px;
+}	
+
+.basket {
+	width: 160px;
+	margin: 0;
+  padding: 0;
+	padding-top: 30px;
+	text-align: right;
+}
 	
+/* MAIN */
+.features {
+	margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.features-list {
+  margin: 0;
+	padding: 0;
+	display: flex;
+  justify-content: flex-start;
+}
+
+.feature-item {
+  width: 300px;
+}
+
+.features-item-1 {
+	margin-right: 100px; /* ?????????? ЭТО НЕ РАБОТАЕТ проверить */
+}
+
+.features-item-2 {
+	margin-right: 100px; /* ?????????? ЭТО НЕ РАБОТАЕТ проверить */
+}
+
+/*.feature-item:nth-child(3n) {
+  margin-right: 0;
+}*/
+
+/* MAIN CATALOG*/
+.catalog-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter {
+	width: 260px;
+	margin: 0;
+	padding: 0;
+	margin-right: 140px;
+}
+
+.catalog {
+	width: 760px;
+}
+
+.catalog-list {
+	display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.catalog-item {
+  width: 360px;
+	margin-bottom: 33px;
+	margin-right: 40px; 
+}
+
+.catalog-item:nth-child(2n) {
+  margin-right: 0;
+}
+
+/* FOOTER */
+.main-footer {
+  margin-top: 69px;
+	margin-bottom: 69px;
+}
+
+.main-footer .container {
+  display: flex;
+	flex-direction: row;
+  justify-content: flex-start;	
+}
+
+.footer-social {
+	width: 260px;
+	margin: 0;
+	padding: 0;
+	margin-right: 140px;
+}
+
+.footer-slogan {
+	margin: 0;
+	padding: 0;
+}
