@@ -43,64 +43,8 @@ img {
 	max-width: 100% 
 }
 
-/* HEADER */
-header {
-	background-color: #eeeeee;
-}
-
 a {
   text-decoration: none;
-}
-
-.main-navigation, .basket {
-  font-size: 16px;
-	font-weight: 500;
-  line-height: 30px;
-  color: #000000;
-	text-transform: uppercase; 
-
-  background-color: #eeeeee;
-}
-
-.site-navigation {
-  list-style: none;
-}
-
-.site-navigation a,
-.basket a {
-  color: #000000;
-}
-
-.site-navigation a:link,
-.basket a:link { /* Определяет стиль для обычной непосещенной ссылки */
-	color: #000000;
-}
-
-.site-navigation a:visited,
-.basket a:visited { /* Определяет стиль для посещенной ссылки */
-	color: #000000;
-}
-
-.site-navigation a:hover,
-.basket a:hover { /* Определяет стиль для ссылки при наведении на нее мышью */
-	color: #fb565a;
-}
-
-.site-navigation a:active,
-.basket a:active { /* Определяет стиль для активной ссылки. Активной ссылка становится при нажатии на нее */
-	color: #000000;
-	opacity: 0.3;
-}
-
-.site-navigation a:focus,
-.basket a:focus {
-	color: #000000;
-	opacity: 0.3;
-}
-
- .site-navigate-current a {
-	color: #000000;
-	border-bottom: solid 2px #fb565a; 
 }
 
 h1 { 
@@ -134,11 +78,71 @@ h3 {
 	text-align: left;	
 }
 
+/* HEADER */
+.main-header {
+	background-color: #eeeeee;
+}
+
+.main-navigation, 
+.main-navigation__basket {
+  font-size: 16px;
+	font-weight: 500;
+  line-height: 30px;
+  color: #000000;
+	text-transform: uppercase; 
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a,
+.main-navigation__basket a {
+  color: #000000;
+}
+
+.site-navigation a:link,
+.main-navigation__basket a:link { /* Определяет стиль для обычной непосещенной ссылки */
+	color: #000000;
+}
+
+.site-navigation a:visited,
+.main-navigation__basket a:visited { /* Определяет стиль для посещенной ссылки */
+	color: #000000;
+}
+
+.site-navigation a:hover,
+.main-navigation__basket a:hover,
+.site-navigation a:focus,
+.main-navigation__basket a:focus { /* Определяет стиль для ссылки при наведении на нее мышью */
+	color: #fb565a;
+}
+
+.site-navigation a:active,
+.main-navigation__basket a:active { /* Определяет стиль для активной ссылки. Активной ссылка становится при нажатии на нее */
+	color: #000000;
+	opacity: 0.3;
+}
+
+ .site-navigate-current a {
+	color: #000000;
+	border-bottom: solid 2px #fb565a; 
+}
+
 /* MAIN */
-.button {
+.features-list {
+	list-style: none;
+}
+
+.features-item {
+  text-align: left;
+}
+
+.features-item a {
 	display: block;
   /*margin: 0px auto;*/
   padding: 16px 0px;
+	/*padding: 19px 39px 18px 39px;*/
   width: 160px;
 	box-sizing: content-box;
 	
@@ -151,99 +155,46 @@ h3 {
 	text-align: center;
   text-transform: uppercase;
 
-  background-color: #fb565a;
   border: none;
 	border-radius: 3px;
 }
 
-.button:hover,
-.button:focus {
+.features-item__red {
+  background-color: #fb565a;
+}
+
+.features-item__red:hover,
+.features-item__red:focus {
   background-color: #e74246;
 }
 
-.button:active {
+.features-item__red:active {
   background-color: #d7373b;
 }
 
-.features-list {
-	list-style: none;
-}
-
-.features-item {
-  text-align: left;
-}
-
-/*.features-list li:nth-child(1) a {
-	font: inherit;
-	font-size: 16px;
-	font-weight: 500;
-  line-height: 18px;
-  color: #ffffff;
-  vertical-align: middle;
-	text-align: center;
-  text-transform: uppercase;
-
-  background-color: #fb565a;
-  border: none;
-}*/
-
-.features-list li:nth-child(2) a {
-	display: block;
-  /*margin: 0px auto;*/
-  padding: 16px 0px;
-  width: 160px;
-	box-sizing: content-box;
-	
-	font: inherit;
-	font-size: 16px;
-	font-weight: 500;
-  line-height: 18px;
-  color: #ffffff;
-  vertical-align: middle;
-	text-align: center;
-  text-transform: uppercase;
-
+.features-item__green{
   background-color: #00ca74;
-  border: none;
-	border-radius: 3px;
 }
 
-.features-list li:nth-child(2) a:hover,
-.features-list li:nth-child(2) a:focus {
+.features-item__green:hover,
+.features-item__green:focus {
   background-color: #00bc6c;
 }
 
-.features-list li:nth-child(2) a:active {
+.features-item__green:active {
   background-color: #00aa62;
 }
 
-.features-list li:nth-child(3) a {
-	display: block;
-  /*margin: 0px auto;*/
-  padding: 16px 0px;
-  width: 160px;
-	box-sizing: content-box;
-	
-	font: inherit;
-	font-size: 16px;
-	font-weight: 500;
-  line-height: 18px;
-  color: #ffffff;
-  vertical-align: middle;
-	text-align: center;
-  text-transform: uppercase;
-
+.features-item__yellow {
   background-color: #efc84a;
-  border: none;
-	border-radius: 3px;
 }
 
-.features-list li:nth-child(3) a:hover
-.features-list li:nth-child(3) a:focus {
+.features-item__yellow:hover,
+.features-item__yellow:focus {
   background-color: #eab534;
 }
 
-.features-list li:nth-child(3) a:active {
+.features-item__yellow:active {
   background-color: #e5a722;
 }
 
@@ -476,7 +427,7 @@ body {
 	flex-direction: row;
 }
 
-.logo {
+.main-navigation__logo {
 	width: 160px;
 	margin-right: 200px;
 }
@@ -495,7 +446,7 @@ body {
 	padding-top: 30px;
 }	
 
-.basket {
+.main-navigation__basket {
 	width: 160px;
 	margin: 0;
   padding: 0;
@@ -513,24 +464,18 @@ body {
   margin: 0;
 	padding: 0;
 	display: flex;
+	flex-direction: row;
   justify-content: flex-start;
 }
 
 .feature-item {
   width: 300px;
+	margin-right: 100px; /* ????? НЕ РАБОТАЕТ почему-то */
 }
 
-.features-item-1 {
-	margin-right: 100px; /* ?????????? ЭТО НЕ РАБОТАЕТ проверить */
-}
-
-.features-item-2 {
-	margin-right: 100px; /* ?????????? ЭТО НЕ РАБОТАЕТ проверить */
-}
-
-/*.feature-item:nth-child(3n) {
+.feature-item:nth-child(3n) {
   margin-right: 0;
-}*/
+}
 
 /* MAIN CATALOG*/
 .catalog-columns {
