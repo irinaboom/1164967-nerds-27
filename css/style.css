@@ -133,6 +133,59 @@ html { box-sizing: border-box; }
 }
 
 /* MAIN */
+/* SLIDER */
+.slider{
+	background-color: #eeeeee;
+}
+
+.slider-item label {
+	display: block;
+	padding-top: 66px;
+	
+	font: inherit;
+	font-size: 55px;
+  font-weight: 500;
+  line-height: 55px;
+  color: #000000;
+}
+
+.slider-item p {
+	display: block;
+	padding-top: 28px;
+	
+	font: inherit;
+  color: #283136;
+}
+
+.slider-item a {
+	display: block;
+	padding: 19px 23px 19px 22px;
+  width: 240px;
+
+	font: inherit;
+	font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #ffffff;
+  vertical-align: middle;
+	text-align: center;
+  text-transform: uppercase;
+
+	background-color: #fb565a;
+  border: none;
+	border-radius: 3px;
+}
+
+.slider-item a:hover,
+.slider-item a:focus {
+  background-color: #e74246;
+}
+
+.slider-item a:active {
+  background-color: #d7373b;
+}
+
+/* FEATURES */
 .features-list {
 	list-style: none;
 }
@@ -194,7 +247,117 @@ html { box-sizing: border-box; }
   background-color: #e5a722;
 }
 
+/* ABOUT STUDIO */
+.about-studio-column1 ul {
+	list-style: none;
+}
+
+.about-studio-column1 ul li {
+	padding-top: 20px;
+}
+
+.about-studio-title {
+	font: inherit;
+	font-size: 45px;
+  font-weight: 500;
+  line-height: 45px;
+}
+
+.table {
+	width: 360px;
+}
+
+.table td {
+	width: 120px;
+}
+
+.text-uppercase-bold {
+	font: inherit;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.table-percent {
+	padding-top: 52px;
+	
+	font: inherit;
+	font-size: 45px;
+	font-weight: bold;
+	line-height: 10px;
+}
+
+.table-percent-description {
+	padding-top: 27px;
+	
+	font: inherit;
+	line-height: 18px;
+	color: #283136;
+}
+
+/* PARTNERS */
+.partners-list {
+	padding-top: 46px; 
+	padding-bottom: 48px;
+	
+	list-style: none;
+	
+	border-top: solid 2px #eeeeee;
+	border-bottom: solid 2px #eeeeee;
+}
+
+.partners-item a {
+	opacity: 0.2;
+}
+
+.partners-item a:hover,
+.partners-item a:focus {
+	opacity: 1;
+}
+
+.partners-item a:active {
+	opacity: 0.1;
+}
+
+/* MAP */
+.map-wrapper {
+	text-align: center;
+}
+
+.contact-info {
+	width: 319px;
+	padding: 54px 50px 47px;
+	background-color: #ececec; /* #ECECEC */
+}
+
+.contact-info button {
+	display: block;
+	padding: 19px 46px 19px 45px; 
+  width: 219px; /* ????? ПОЧЕМУ кнопка встает в две строки */
+
+	font: inherit;
+	font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #ffffff;
+  vertical-align: middle;
+	text-align: center;
+  text-transform: uppercase;
+
+	background-color: #fb565a;
+  border: none;
+	border-radius: 3px;
+}
+
+.contact-info p {
+	color: #666666; 
+}
+
+.contact-info a {
+	color: #666666; 
+}
+
 /* MAIN CATALOG */
+/* H1 */
 .page-title {
 	padding-top: 85px; 
 	padding-bottom: 117px;
@@ -394,11 +557,13 @@ footer ul{
 	}
 
 
+
+
+
 /* ----- Сеточные стили ----- */
 html,
 body {
   min-width: 1160px;
-  /*min-height: 2476px;*/
 }
 
 .container {
@@ -445,30 +610,76 @@ body {
 }
 	
 /* MAIN */
+/* SLIDER */
+.slider{
+	padding-top: 19px;
+}
+
+.slider-item {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+  justify-content: space-between;
+}
+
+.slider-radio {
+ text-align: center;
+}
+
+/* FEATURES */
 .features {
 	margin-top: 80px;
   margin-bottom: 80px;
 }
-
 
 .features-list {
   margin: 0;
 	padding: 0;
 	display: flex;
 	flex-direction: row;
-  justify-content: flex-start;
+  /*justify-content: flex-start;*/
+	justify-content: space-between; /* ????? НЕ РАБОТАЕТ почему-то: расстояния между блоками больше 100пикс ????? */
 }
 
-.feature-item { /* ????? НЕ РАБОТАЕТ почему-то */
+.feature-item { /* ????? НЕ РАБОТАЕТ почему-то ????? */
 	width: 300px;
 	margin-right: 100px; 
 }
 
-.feature-item:nth-child(3n) { /* ????? НЕ РАБОТАЕТ почему-то */
+.feature-item:nth-child(3n) { /* ????? НЕ РАБОТАЕТ почему-то ????? */
   margin-right: 60px;
 }
 
-/* MAIN CATALOG*/
+/* ABOUT STUDIO */
+.about-studio-columns {
+  display: flex;
+	flex-direction: row;
+  justify-content: space-between;
+}
+
+.about-studio-column1 {
+	width: 700px; /* 660 */
+}
+
+.about-studio-column2 {
+	width: 360px;
+}
+
+
+/* PARTNERS */
+.partners-list {
+	display: flex;
+	flex-direction: row;
+  justify-content: space-between;
+	align-items: center;
+}
+
+.partners-item {
+	width: 260px;
+}
+
+/* MAIN CATALOG */
 .catalog-columns {
   display: flex;
   justify-content: space-between;
