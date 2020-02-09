@@ -332,7 +332,7 @@ html { box-sizing: border-box; }
 .contact-info button {
 	display: block;
 	padding: 19px 46px 19px 45px; 
-  width: 219px; /* ????? ПОЧЕМУ кнопка встает в две строки */
+  width: 219px; /* ????? ПОЧЕМУ кнопка встает в две строки ????? */
 
 	font: inherit;
 	font-size: 16px;
