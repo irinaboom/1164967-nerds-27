@@ -9,8 +9,8 @@
 </head>
 <body>
 <header class="header">
-	<div class="container header-wrapper">
-		<a class="navigation__logo" href="index.html"> 
+	<div class="header-wrapper container">
+		<a class="navigation-logo" href="index.html"> 
 			<img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс">
 		</a>
 		<nav class="navigation">
@@ -21,19 +21,17 @@
 				<li><a href="#">Контакты</a></li>
 			</ul>
 		</nav>
-		<div class="navigation__basket"> 
-			<a href="#">Корзина</a> 
-		</div>
+		<a class="header-basket" href="#">Корзина</a> 
 	</div>	
 	<h1 class="page-title">Магазин готовых шаблонов</h1>
 </header>
 	
 <main>
 	<div class="catalog-columns container">
-		<section class="filter"> <!-- Фильтры class: filter-->
+		<section class="filter"> 
 			<h2 class="visually-hidden">Фильтры наших работ</h2> <!-- class: visually-hidden-->
 
-			<div class="cost">
+			<div>
 				<!-- Фильтр стоимости -->
 				<form method="get" action="https://echo.htmlacademy.ru" oninput="costoutput.value=cost.value">
 					<fieldset class="filter-cost">
@@ -118,10 +116,10 @@
 	
 		<section class="catalog"> <!-- Каталог class: catalog -->
 			<!-- Сортировать:  -->
-			<div class="sorting">
+			<div class="catalog-sorting">
 				<p>Соритировать:</p>
-				<ul class="sorting-list">
-					<li class="sorting-navigate-current"><a href="#">По цене</a></li>
+				<ul class="catalog-sorting-list">
+					<li class="catalog-sorting-current"><a href="#">По цене</a></li>
 					<li><a href="#">По типу</a></li>
 					<li><a href="#">По названию</a></li>
 					<li><a href="#">По убыванию</a></li>
@@ -133,7 +131,7 @@
 			<h2 class="visually-hidden">Каталог наших работы</h2> <!-- class: visually-hidden-->
 			<ul class="catalog-list">
 				<li class="catalog-item"> 
-					<a href="#"> 
+					<a class="catalog-item-link" href="#"> 
 						<img src="img/img-sedona.jpg" width="360" height="576" alt="Sedona">
 						<div class="catalog-item-content">
 							<h3>Sedona</h3>
@@ -143,7 +141,7 @@
 					</a> 
 				</li>
 				<li class="catalog-item"> 
-					<a href="#"> 
+					<a class="catalog-item-link" href="#"> 
 						<img src="img/img-pink.jpg" width="360" height="576" alt="Pink App">
 						<div class="catalog-item-content">
 							<h3>Pink App</h3>
@@ -153,7 +151,7 @@
 					</a> 
 				</li>
 				<li class="catalog-item"> 
-					<a href="#"> 
+					<a class="catalog-item-link" href="#"> 
 						<img src="img/img-barbershop.jpg" width="360" height="576" alt="Barbershop">
 						<div class="catalog-item-content">
 							<h3>Barbershop</h3>
@@ -163,7 +161,7 @@
 					</a>
 				</li>
 				<li class="catalog-item"> 
-					<a href="#"> 
+					<a class="catalog-item-link" href="#"> 
 						<img src="img/img-mishka.jpg" width="360" height="576" alt="Mishka"> 
 						<div class="catalog-item-content">
 							<h3>Mishka</h3>
@@ -173,7 +171,7 @@
 					</a>
 				</li>
 				<li class="catalog-item"> 
-					<a href="#"> 
+					<a class="catalog-item-link" href="#"> 
 						<img src="img/img-aplus.jpg" width="360" height="576" alt="A Plus"> 
 						<div class="catalog-item-content">
 							<h3>A Plus</h3>
@@ -183,7 +181,7 @@
 					</a>
 				</li>
 				<li class="catalog-item"> 
-					<a href="#"> 
+					<a class="catalog-item-link" href="#"> 
 						<img src="img/img-kvast.jpg" width="360" height="576" alt="Кваст"> 
 						<div class="catalog-item-content">
 							<h3>Кваст</h3>
@@ -259,9 +257,9 @@
 <footer class="footer container">
 	<h2 class="visually-hidden">Нёрдс в социальных сетях</h2> <!-- class: visually-hidden-->
 	<ul class="footer-social">
-		<li><a class="social-button" href="#">Вконтакте</a></li>
-		<li><a class="social-button" href="#">Фейсбук</a></li>
-		<li><a class="social-button" href="#">Инстаграм</a></li>
+		<li><a class="footer-social-button" href="#">Вконтакте</a></li>
+		<li><a class="footer-social-button" href="#">Фейсбук</a></li>
+		<li><a class="footer-social-button" href="#">Инстаграм</a></li>
 	</ul>
 	<div class="footer-slogan">
 		<p>Давайте дружить, это выгодно!</p>
