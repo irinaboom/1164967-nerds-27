@@ -37,7 +37,8 @@ body {
 }
 
 img { 
-	max-width: 100% 
+	max-width: 100%;
+	height: auto;
 }
 
 a {
@@ -50,13 +51,31 @@ a {
 	padding: 0 20px;
 }
 
-.visually-hidden {
+/*.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}*/
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -89,29 +108,54 @@ a {
 
 .navigation-list {
 	display: flex;
-	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: space-between;
+	width: 440px;
 	margin: 0;
   padding: 0;
-	padding-top: 30px;
+	padding-top: 26px;
 	
 	list-style: none;
 }	
 
 .header-basket {
+	display: flex;
+	justify-content: flex-end;
 	width: 160px;
 	margin: 0;
   padding: 0;
-	padding-top: 30px;
-	text-align: right;
+	padding-top: 26px;
 	
 	font-weight: 500;
   line-height: 30px;
 	text-transform: uppercase; 
 }
 
+.header-basket::before {
+  content: "";
+	
+	position: absolute;
+	top: 32px;
+  left: 45px;
+	
+  width: 15px;
+  height: 15px;
+  
+	background-image: url("../img/cart-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.header-basket {
+	position: relative;
+	padding-left: 40px;
+}
+
 .navigation-list a,
 .header-basket a {
+	padding-right: 0px; /* ????? нужно что-то задать, а то при переполнении будут слипаться пункты меню */
+  
+  /*vertical-align: middle;*/
   color: #000000;
 }
 
@@ -139,8 +183,9 @@ a {
 }
 
  .navigation-item-current a {
+	padding-bottom: 9px;
 	color: #000000;
-	border-bottom: solid 2px #fb565a; 
+	border-bottom: solid 2px #fb565a;
 }
 
 /* MAIN */
@@ -198,7 +243,10 @@ a {
 }
 
 .slider-item a:active {
+	color: rgba(255, 255, 255, 0.3);
+	
   background-color: #d7373b;
+	box-shadow: inset 0px 3px 0px 0px rgba(0, 1, 1, 0.1);
 }
 
 .slider-radio {
@@ -265,7 +313,10 @@ a {
 }
 
 .features-item-red:active {
+	color: rgba(255, 255, 255, 0.3); 
+	
   background-color: #d7373b;
+	box-shadow: inset 0px 3px 0px 0px rgba(0, 1, 1, 0.1);
 }
 
 .features-item-green{
@@ -278,7 +329,10 @@ a {
 }
 
 .features-item-green:active {
+	color: rgba(255, 255, 255, 0.3);
+	
   background-color: #00aa62;
+	box-shadow: inset 0px 3px 0px 0px rgba(0, 1, 1, 0.1);
 }
 
 .features-item-yellow {
@@ -291,7 +345,10 @@ a {
 }
 
 .features-item-yellow:active {
+	color: rgba(255, 255, 255, 0.3);
+	
   background-color: #e5a722;
+	box-shadow: inset 0px 3px 0px 0px rgba(0, 1, 1, 0.1);
 }
 
 /* ABOUT STUDIO */
@@ -386,8 +443,10 @@ a {
 /* MAIN CATALOG */
 /* H1 */
 .page-title { 
-	padding-top: 85px; 
-	padding-bottom: 117px;
+	margin: 0px;
+	padding: 0px;
+	padding-top: 71px; 
+	padding-bottom: 108px;
 	
 	font-size: 55px;
 	font-weight: 500; /* medium */
@@ -403,6 +462,111 @@ a {
 	padding: 0;
 	margin-right: 140px;
 }
+
+
+/*************************************/
+/*.filter-item {
+  margin: 0;
+  padding: 0;
+  
+  border: none;
+}
+
+.range-filter {
+  width: 260px;
+  margin-top: 49px;
+}
+
+.filter-item legend {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.range-controls {
+  position: relative;
+  
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  
+  background-color: #f1f1f1;
+  
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 50px;
+}
+
+.range-controls .toggle-max {
+  left: 110px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  display: inline-block;
+  width: 50%;
+  
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 8px 10px;
+  margin-left: 10px;
+  
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #283136;
+  
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+
+.max-price {
+  text-align: right;
+}
+/*************************************/
+
 
 .filter legend,
 .sorting p {
@@ -439,7 +603,7 @@ a {
 	
 	font-weight: 500;
   line-height: 18px;
-   vertical-align: middle;
+  vertical-align: middle;
 	text-align: center;
   text-transform: uppercase;
 
@@ -608,10 +772,11 @@ a {
 	background-color: #ececec; /* #ECECEC */
 }
 
-.contact-info button {
+.contact-info .button-contact-us {
 	display: inline-block;
-	padding: 19px 46px 19px 45px; 
+	/* padding: 19px 46px 19px 45px; */
   width: 219px; /* ????? ПОЧЕМУ кнопка встает в две строки ????? */
+	height: 50px;
 
   font-weight: 500;
   line-height: 18px;
@@ -637,12 +802,11 @@ a {
 
 /* FOOTER */
 .footer {
-  margin-top: 69px; 
-	margin-bottom: 69px;
-	
 	display: flex;
 	flex-direction: row;
   justify-content: flex-start;
+  margin-top: 69px; 
+	margin-bottom: 69px;
 }
 
 .footer ul {
@@ -650,22 +814,27 @@ a {
 }
 
 .footer-social {
+	display: flex;
+	flex-wrap: wrap;
+  justify-content: space-between;
 	width: 260px;
-	
+	margin: 0;
 	margin-right: 140px;
-}
-
-.footer-social ul {
-	text-align: center;
+  padding: 0;
 }
 
 .footer-social-button {
- /* width: 79px;
-	height: 79px;*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  width: 79px;
+	height: 79px;
+	margin-bottom: 10px; /* если переполнение контентом, чтобы иконки не приклеивались друг к другу */
 	
   color: #ffffff;
 	
 	background-color: #e1e1e1;
+	border-radius: 50%;
 }
 
 .footer-social-button:hover,
@@ -675,6 +844,11 @@ a {
 
 .footer-social-button:active {
 	background-color: #d7373b;
+	box-shadow: inset 0px 3px 0px 0px rgba(0, 1, 1, 0.1);
+}
+
+.footer-social-button:active path {
+	opacity: 0.3;
 }
 
 .footer-slogan {
@@ -683,7 +857,9 @@ a {
 }
 
 .footer-slogan p {
+	display: block;
 	margin: 0;
+	margin-top: 6px;
 	padding: 0;
 	
 	font-size: 36px;
@@ -696,7 +872,8 @@ a {
 	margin: 0;
 	margin-top: 10px;
 	padding: 0;
-
+	
+	font-size: 16px;
 	line-height: 22px;
 	color: #444444;
 	}
