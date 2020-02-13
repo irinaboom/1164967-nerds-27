@@ -45,12 +45,6 @@ a {
   text-decoration: none;
 }
 
-.container {
-  width: 1200px;
-  margin: 0 auto;
-	padding: 0 20px;
-}
-
 /*.visually-hidden {
   position: absolute;
   width: 1px;
@@ -89,7 +83,12 @@ input[type="radio"].visually-hidden {
 
 .header-wrapper {
 	display: flex;
-	flex-direction: row;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+	padding: 0 20px;
 }
 
 .navigation-logo {
@@ -98,8 +97,8 @@ input[type="radio"].visually-hidden {
 }
 
 .navigation {
-	width: 440px;
-	margin-right: 200px;
+	width: 500px;
+	margin-right: 140px;
 	
 	font-weight: 500;
   line-height: 30px;
@@ -109,13 +108,21 @@ input[type="radio"].visually-hidden {
 .navigation-list {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	width: 440px;
+	/*width: 440px;*/
 	margin: 0;
   padding: 0;
 	padding-top: 26px;
 	
 	list-style: none;
+}	
+
+.navigation-list li {
+	/*display: flex;*/
+	margin: 0;
+	margin-right: 44px;
+	margin-left: 2px;
+  padding: 0;
+	
 }	
 
 .header-basket {
@@ -153,9 +160,8 @@ input[type="radio"].visually-hidden {
 
 .navigation-list a,
 .header-basket a {
-	padding-right: 0px; /* ????? нужно что-то задать, а то при переполнении будут слипаться пункты меню */
+	padding-right: 0px; 
   
-  /*vertical-align: middle;*/
   color: #000000;
 }
 
@@ -200,7 +206,6 @@ input[type="radio"].visually-hidden {
 	margin: 0;
 	padding: 0;
 	display: flex;
-	flex-direction: row;
   justify-content: space-between;
 }
 
@@ -255,24 +260,28 @@ input[type="radio"].visually-hidden {
 
 /* FEATURES */
 .features {
-	margin-top: 80px;
-  margin-bottom: 80px;
+  padding-bottom: 80px;
+	
+	border-bottom: solid 2px #eeeeee;
 }
 
 .features-list {
+	display: flex;
+	flex-wrap: wrap;
+  /*justify-content: flex-start;
+	/*justify-content: space-between; /* ????? НЕ РАБОТАЕТ почему-то: расстояния между блоками больше 100пикс ????? */
   margin: 0;
 	padding: 0;
-	display: flex;
-	flex-direction: row;
-  /*justify-content: flex-start;*/
-	justify-content: space-between; /* ????? НЕ РАБОТАЕТ почему-то: расстояния между блоками больше 100пикс ????? */
 	
 	list-style: none;
 }
 
-.feature-item { /* ????? НЕ РАБОТАЕТ почему-то ????? */
+.features-list li {
 	width: 300px;
-	margin-right: 100px; 
+	margin: 0;
+	margin-right: 100px; /* из-за этого переносится третий пункт, ему не нужен марджин */
+	margin-top: 80px;
+	padding: 0;
 }
 
 .feature-item:nth-child(3n) { /* ????? НЕ РАБОТАЕТ почему-то ????? */
@@ -281,16 +290,28 @@ input[type="radio"].visually-hidden {
 
 /* h2 */
 .features-item h2 { 
+	margin: 0px;
+	padding: 0px;
+	margin-top: 18px;
 	font-size: 24px;
 	font-weight: bold;
   line-height: 30px;
 	text-transform: uppercase; 
 }
 
+.features-item p { 
+	margin: 0px;
+	margin-top: 16px;
+	margin-bottom: 32px;
+	padding: 0px;
+}
+
 .features-item a {
 	display: block;
-	padding: 19px 39px 18px 39px;
+	/*padding: 19px 39px 18px 39px;*/
+	padding: 17px 39px 15px 39px;
   width: 160px;
+	/*height: 50px;*/
 
   font-weight: 500;
   line-height: 18px;
@@ -354,8 +375,9 @@ input[type="radio"].visually-hidden {
 /* ABOUT STUDIO */
 .about-columns {
   display: flex;
-	flex-direction: row;
   justify-content: space-between;
+	margin-top: 40px;
+	margin-bottom: 75px;
 }
 
 .about-info {
@@ -363,17 +385,51 @@ input[type="radio"].visually-hidden {
 }
 
 .about-title {
+	margin: 0;
+	margin-top: 34px;
+	padding: 0;
 	font-size: 45px;
   font-weight: 500;
   line-height: 45px;
 }
 
+.about-text {
+	margin: 0;
+	margin-top: 33px;
+	padding: 0;
+}
+
+.about-subtitle {
+	margin: 0;
+	margin-top: 40px;
+	padding: 0;
+}
+
 .about-info ul {
 	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.about-info li::before {
+  content: "";
+	
+	position: absolute;
+	top: 36px;
+  left: 1px;
+	
+  width: 25px;
+  height: 1px;
+  
+	background-image: url("../img/li.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .about-info li {
-	padding-top: 20px;
+	position: relative;
+	padding-top: 23px;
+	padding-left: 37px;
 }
 
 .about-statistic {
@@ -384,9 +440,25 @@ input[type="radio"].visually-hidden {
 	width: 360px;
 }
 
+.about-statistic-table caption {
+	margin: 0;
+	margin-top: 30px;
+	padding: 0;
+}
+
 .about-statistic-table td {
+	margin: 0;
+	padding: 0;
+	padding-top: 57px;
 	width: 120px;
 }
+
+/* ????? НЕ РАБОТАЕТ почему-то ?????  */
+/*.about-statistic-table tr:nth-child(2) {  
+	margin: 0;
+	padding: 0;
+	padding-top: 40px;
+}*/
 
 .about-subtitle {
 	font-weight: bold;
@@ -394,16 +466,12 @@ input[type="radio"].visually-hidden {
 }
 
 .statistic-table-percent {
-	padding-top: 52px;
-	
 	font-size: 45px;
 	font-weight: bold;
 	line-height: 10px;
 }
 
 .statistic-table-description {
-	padding-top: 27px;
-	
 	line-height: 18px;
 	color: #283136;
 }
@@ -411,9 +479,8 @@ input[type="radio"].visually-hidden {
 /* PARTNERS */
 .partners-list {
 	padding-top: 46px; 
-	padding-bottom: 48px;
+	padding-bottom: 37px;
 	display: flex;
-	flex-direction: row;
   justify-content: space-between;
 	align-items: center;
 	
@@ -421,6 +488,25 @@ input[type="radio"].visually-hidden {
 	
 	border-top: solid 2px #eeeeee;
 	border-bottom: solid 2px #eeeeee;
+}
+
+.partners-list li::before {
+  content: "";
+	
+	position: absolute;
+	top: 20px;
+  right: 0px;
+	
+  width: 2px;
+  height: 52px;
+  
+	background-color: #eeeeee;
+  background-repeat: repeat;
+  background-position: 0 0;
+}
+
+.partners-list li {
+	position: relative;
 }
 
 .partners-item {
@@ -632,7 +718,6 @@ input[type="radio"].visually-hidden {
 
 .catalog-sorting-list {
 	display: flex;
-	flex-direction: row;
   justify-content: space-between; /* ДОДЕЛАТЬ */
 }
 
@@ -766,16 +851,40 @@ input[type="radio"].visually-hidden {
 	text-align: center;
 }
 
+.map {
+	position: relative;
+}
+
+.map-marker {
+	content: "";
+	position: absolute;
+
+	top: 90px;
+  left: 680px;
+	
+  width: 231px;
+  height: 190px;
+  
+	/*background-image: url("../img/map-marker.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;*/
+}
+
 .contact-info {
+	position: absolute;
+	
+	top: 54px;
+  left: 0px;
+	
 	width: 319px;
 	padding: 54px 50px 47px;
-	background-color: #ececec; /* #ECECEC */
+	background-color: #ffffff; 
 }
 
 .contact-info .button-contact-us {
 	display: inline-block;
 	/* padding: 19px 46px 19px 45px; */
-  width: 219px; /* ????? ПОЧЕМУ кнопка встает в две строки ????? */
+  width: 219px; 
 	height: 50px;
 
   font-weight: 500;
@@ -792,6 +901,16 @@ input[type="radio"].visually-hidden {
 	/*cursor: pointer;*/
 }
 
+.contact-info .button-contact-us:hover,
+.contact-info .button-contact-us:focus {
+	background-color: #e74246;
+}
+
+.contact-info .button-contact-us:active {
+	background-color: #d7373b;
+	box-shadow: inset 0px 3px 0px 0px rgba(0, 1, 1, 0.1); /* ????? НЕ РАБОТАЕТ ????? ы*/
+}
+
 .contact-info p {
 	color: #666666; 
 }
@@ -800,10 +919,82 @@ input[type="radio"].visually-hidden {
 	color: #666666; 
 }
 
+/* Форма Написать письмо нам*/
+.form-letter {
+	position: absolute;
+	width: 960px;
+	height: 590px;
+	padding-top: 70px;
+	padding-right: 100px;
+	padding-left: 100px;
+	
+	background-color: #eee; /*fff*/
+	box-shadow: -20px 0px 40px 0px rgba(0, 1, 1, 0.75);
+}
+
+.form-letter fieldset{
+	border: none;
+	margin:0 ;
+	padding: 0;
+}
+
+.form-letter legend {
+	margin: 0;
+	padding: 0;
+	
+	font-size: 45px;
+	font-weight: 500;
+	line-height: 45px;
+}
+
+/* Кнопка Отправить */
+.form-letter input[type="submit"] {
+	display: inline-block;
+  width: 260px; 
+	height: 50px;
+
+  font-weight: 500;
+  line-height: 18px;
+  color: #ffffff;
+  vertical-align: middle;
+	text-align: center;
+  text-transform: uppercase;
+
+	background-color: #fb565a;
+  border: none;
+	border-radius: 3px;
+}
+
+.form-letter input[type="submit"]:hover,
+.form-letter input[type="submit"]:focus {
+  background-color: #e74246;
+}
+
+.form-letter input[type="submit"]:active {
+	color: rgba(255, 255, 255, 0.3); 
+	
+  background-color: #d7373b;
+	box-shadow: inset 0px 3px 0px 0px rgba(0, 1, 1, 0.1);
+}
+
+.button-close {
+	position: absolute;
+
+	top: 78px;
+  right: 90px;
+	
+  width: 21px;
+  height: 21px;
+  
+	background-image: url("../img/close-cross.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+
 /* FOOTER */
 .footer {
 	display: flex;
-	flex-direction: row;
   justify-content: flex-start;
   margin-top: 69px; 
 	margin-bottom: 69px;
