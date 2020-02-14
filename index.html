@@ -111,12 +111,12 @@
 			<img src="img/nerds-logo-color.jpg" width="360" height="208" alt="Нёрдс">
 			<table class="about-statistic-table">
 				<caption class="about-subtitle">С 2004 года Любим точность во всем:</caption>
-				<tr>
+				<tr class="percent-line">
 					<td class="statistic-table-percent">146<sup>%</sup></td>
 					<td class="statistic-table-percent">100<sup>%</sup></td>
 					<td class="statistic-table-percent">50<sup>%</sup></td>
 				</tr>
-				<tr>
+				<tr class="description-line">
 					<td class="statistic-table-description">Уровень<br>самоотдачи</td>
 					<td class="statistic-table-description">Соблюдение<br>сроков</td>
 					<td class="statistic-table-description">Минимальная<br>предоплата</td>
@@ -128,13 +128,13 @@
 	<section class="partners container">
 		<h2 class="visually-hidden">Партнёры</h2> <!-- class: visually-hidden-->
 		<ul class="partners-list">
-			<li class="partners-item">
+			<li class="partners-item partners-item-decor">
 				<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-html-academy.png" width="199" height="68" alt="HTML Academy"></a>
 			</li>
-			<li class="partners-item">
+			<li class="partners-item partners-item-decor">
 				<a href="#"><img src="img/logo-barbershop-borodinski.png" width="209" height="90" alt="Barbershop Borodinski"></a>
 			</li>
-			<li class="partners-item">
+			<li class="partners-item partners-item-decor">
 				<a href="#"><img src="img/logo-pink.png" width="185" height="52" alt="Pink"></a>
 			</li>
 			<li class="partners-item">
@@ -143,30 +143,28 @@
 		</ul>
 	</section>
 	
-	<section>
+	<section class="map">
 		<!-- Блок Адрес студии: карта-->
-		<div class="map-wrapper">
-			<div class="map">
-				<img src="img/map.png" width="1440" height="416" alt="Офис компании по адресу: 191186, Санкт-Петербург,	ул. Б. Конюшенная, д. 19/8" >
-				<div class="map-marker">
-					<img src="img/map-marker.png" width="231" height="190" alt="Метка студии на карте" >
-				</div>
-				<!-- Блок Адрес студии -->
-				<div class="contact-info">
-					<h3>NЁRDS DESIGN STUDIO</h3>
-					<p>
-						191186, Санкт-Петербург,<br> 
-						ул. Б. Конюшенная, д. 19/8
-					</p>
-					<p>
-						тел. <a href="tel:=+78122757575">+7 (812) 275-75-75</a>
-					</p>
-					<!-- Напишите нам -->
-					<button class="button-contact-us" type="button">Напишите нам</button>
-				</div>
-			</div>
+		<img src="img/map.png" width="1440" height="416" alt="Офис компании по адресу: 191186, Санкт-Петербург,	ул. Б. Конюшенная, д. 19/8" >
+		<div class="map-marker">
+			<img src="img/map-marker.png" width="231" height="190" alt="Метка студии на карте" >
 		</div>
 
+		<!-- Блок Адрес студии -->
+		<div class="contact-info">
+			<h3>NЁRDS DESIGN STUDIO</h3>
+			<p class="contact-info-adress">
+				191186, Санкт-Петербург,<br> 
+				ул. Б. Конюшенная, д. 19/8
+			</p>
+			<p class="contact-info-tel">
+				тел. <a href="tel:=+78122757575">+7 (812) 275-75-75</a>
+			</p>
+			<!-- Напишите нам кнопка-->
+			<button class="button-contact-us" type="button">Напишите нам</button>
+		</div>
+
+		<!-- Напишите нам форма-->
 		<div class="form-letter">
 			<form action="https://echo.htmlacademy.ru/courses" method="post">
 				<fieldset>
@@ -189,8 +187,8 @@
 				</div>
 			</form>
 			<button class="button-close" type="button">
-      	<span class="visually-hidden">Закрыть</span>
-      </button>
+				<span class="visually-hidden">Закрыть</span>
+			</button>
 		</div>
 	</section>
 </main>

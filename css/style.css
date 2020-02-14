@@ -279,13 +279,17 @@ input[type="radio"].visually-hidden {
 .features-list li {
 	width: 300px;
 	margin: 0;
-	margin-right: 100px; /* из-за этого переносится третий пункт, ему не нужен марджин */
+	margin-right: 100px; 
 	margin-top: 80px;
 	padding: 0;
 }
 
-.feature-item:nth-child(3n) { /* ????? НЕ РАБОТАЕТ почему-то ????? */
+/* .feature-item :nth-child(3n) { /
   margin-right: 60px;
+}*/
+
+.features-list li:last-child {
+	margin-right: 60px;
 }
 
 /* h2 */
@@ -447,18 +451,16 @@ input[type="radio"].visually-hidden {
 }
 
 .about-statistic-table td {
-	margin: 0;
-	padding: 0;
-	padding-top: 57px;
 	width: 120px;
 }
 
-/* ????? НЕ РАБОТАЕТ почему-то ?????  */
-/*.about-statistic-table tr:nth-child(2) {  
-	margin: 0;
-	padding: 0;
-	padding-top: 40px;
-}*/
+.statistic-table-percent {
+	padding-top: 57px;
+}
+
+.statistic-table-description {
+	padding-top: 32px;
+}
 
 .about-subtitle {
 	font-weight: bold;
@@ -479,10 +481,10 @@ input[type="radio"].visually-hidden {
 /* PARTNERS */
 .partners-list {
 	padding-top: 46px; 
-	padding-bottom: 37px;
+	padding-bottom: 40px;
 	display: flex;
-  justify-content: space-between;
-	align-items: center;
+  /*justify-content: space-between;*/
+	justify-content: flex-start;
 	
 	list-style: none;
 	
@@ -490,11 +492,26 @@ input[type="radio"].visually-hidden {
 	border-bottom: solid 2px #eeeeee;
 }
 
-.partners-list li::before {
+.partners-list li {
+	position: relative;
+
+	margin: 0;
+	margin-right: 40px;
+	padding: 0;
+	
+	width: 260px;
+	height: 90px;
+}
+
+.partners-list li:last-child {
+	margin-right: 0px;
+}
+
+.partners-item-decor::before {
   content: "";
 	
 	position: absolute;
-	top: 20px;
+	top: 17px;
   right: 0px;
 	
   width: 2px;
@@ -505,13 +522,9 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
 }
 
-.partners-list li {
-	position: relative;
-}
-
-.partners-item {
+/*.partners-item {
 	width: 260px;
-}
+}*/
 
 .partners-item a {
 	opacity: 0.2;
@@ -847,12 +860,11 @@ input[type="radio"].visually-hidden {
 }
 
 /* MAP */
-.map-wrapper {
-	text-align: center;
-}
-
 .map {
 	position: relative;
+	margin: 0 auto;
+	margin-top: 80px;
+	width: 1440px;
 }
 
 .map-marker {
@@ -860,7 +872,7 @@ input[type="radio"].visually-hidden {
 	position: absolute;
 
 	top: 90px;
-  left: 680px;
+  left: 820px;
 	
   width: 231px;
   height: 190px;
@@ -874,11 +886,44 @@ input[type="radio"].visually-hidden {
 	position: absolute;
 	
 	top: 54px;
-  left: 0px;
+  left: 140px;
 	
 	width: 319px;
-	padding: 54px 50px 47px;
+	padding: 34px 50px 47px;
 	background-color: #ffffff; 
+}
+
+.contact-info h3 {
+	margin: 0;
+	margin-top: 18px;
+	padding: 0;
+}
+
+.contact-info p {
+	color: #666666; 
+}
+
+.contact-info-adress {
+	margin: 0;
+	padding: 0;
+	display: block;
+	margin-top: 25px;
+	
+	line-height: 18px;
+}
+
+.contact-info-tel {
+	margin: 0;
+	padding: 0;
+	display: block;
+	margin-top: 18px;
+	margin-bottom: 38px;
+	
+	line-height: 18px;
+}
+
+.contact-info-tel a {
+	color: #666666; 
 }
 
 .contact-info .button-contact-us {
@@ -908,27 +953,23 @@ input[type="radio"].visually-hidden {
 
 .contact-info .button-contact-us:active {
 	background-color: #d7373b;
-	box-shadow: inset 0px 3px 0px 0px rgba(0, 1, 1, 0.1); /* ????? НЕ РАБОТАЕТ ????? ы*/
-}
-
-.contact-info p {
-	color: #666666; 
-}
-
-.contact-info a {
-	color: #666666; 
+	box-shadow: inset 0px 3px 0px 0px rgba(0, 1, 1, 0.1); /* ????? НЕ РАБОТАЕТ ????? */
 }
 
 /* Форма Написать письмо нам*/
 .form-letter {
 	position: absolute;
-	width: 960px;
-	height: 590px;
+	
+	top: 25%; /* РАЗОБРАТЬСЯ */
+  left: 25%;
+	
 	padding-top: 70px;
 	padding-right: 100px;
 	padding-left: 100px;
+	width: 960px;
+	height: 590px;
 	
-	background-color: #eee; /*fff*/
+	background-color: #ffffff; 
 	box-shadow: -20px 0px 40px 0px rgba(0, 1, 1, 0.75);
 }
 
