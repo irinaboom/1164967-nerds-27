@@ -29,108 +29,105 @@
 <main>
 	<div class="catalog-columns container">
 		<section class="filter"> 
-			<h2 class="visually-hidden">Фильтры наших работ</h2> <!-- class: visually-hidden-->
+			<h2 class="visually-hidden">Фильтры наших работ</h2> 
+			
+			<!-- Фильтр стоимости -->
+			<!--form method="get" action="https://echo.htmlacademy.ru" oninput="costoutput.value=cost.value">
+				<fieldset class="filter-cost">
+					<legend>Стоимость:</legend>
+					<input type="range" id="cost" name="cost" min="0" max="15000" step="1">
+					<div>
+						<output name="costoutput"> </output>
+					</div>
+				</fieldset>
+			</form-->
 
-			<div>
-				<!-- Фильтр стоимости -->
-				<form method="get" action="https://echo.htmlacademy.ru" oninput="costoutput.value=cost.value">
-					<fieldset class="filter-cost">
-						<legend>Стоимость:</legend>
-						<input type="range" id="cost" name="cost" min="0" max="15000" step="1">
-						<div>
-							<output name="costoutput"> </output>
-						</div>
-					</fieldset>
-				</form>
-				
-				<!--form method="get" action="https://echo.htmlacademy.ru">
-					<fieldset class="filter-item">
-						<legend>Стоимость:</legend>
-						<div class="range-filter">
-							<div class="range-controls">
-								<div class="scale">
-									<div class="bar" style="margin-left: 20%; width: 30%"></div>
-								</div>
-								<div class="toggle toggle-min"></div>
-								<div class="toggle toggle-max"></div>
+			<form method="get" action="https://echo.htmlacademy.ru">
+				<fieldset class="filter-item">
+					<legend>Стоимость:</legend>
+					<div class="range-filter">
+						<div class="range-controls">
+							<div class="scale">
+								<div class="bar" style="margin-left: 20%; width: 30%"></div>
 							</div>
-							<div class="price-controls">
-								<label class="min-price">от <input name="min-price" type="number" value="0"></label>
-								<label class="max-price">до <input name="max-price" type="number" value="15000"></label>
-							</div>
+							<div class="toggle toggle-min"></div>
+							<div class="toggle toggle-max"></div>
 						</div>
-					</fieldset>
-				</form -->
-			</div>
+						<div class="price-controls">
+							<label class="min-price">от <input name="min-price" type="number" value="0"></label>
+							<label class="max-price">до <input name="max-price" type="number" value="15000"></label>
+						</div>
+					</div>
+				</fieldset>
+			</form>
 
-			<div>
-				<form method="get" action="https://echo.htmlacademy.ru">
-					<!-- Фильтр по сеткам -->
-					<fieldset class="filter-grid">
-						<legend>Сетка:</legend>
-						<ul>
-							<li>
-								<input type="radio" name="product-group" value="adaptive" id="filter-adaptive" checked>
-								<label for="filter-adaptive">
-									Адаптивная
-								</label>
-							</li>
-							<li>
-								<input type="radio" name="product-group" value="fixed" id="filter-fixed">
-								<label for="filter-fixed">
-									Фиксированная
-								</label>
-							</li>
-							<li>
-								<input type="radio" name="product-group" value="rubber" id="filter-rubber">
-								<label for="filter-rubber">
-									Резиновая
-								</label>
-							</li>
-						</ul>
-					</fieldset>
+			<form method="get" action="https://echo.htmlacademy.ru">
+				<!-- Фильтр по сеткам -->
+				<!--fieldset class="filter-grid"-->
+				<fieldset class="filter-item">
+					<legend>Сетка:</legend>
+					<ul>
+						<li class="filter-option">
+							<input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="adaptive" id="filter-adaptive" checked>
+							<label for="filter-adaptive">
+								Адаптивная
+							</label>
+						</li>
+						<li class="filter-option">
+							<input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="fixed" id="filter-fixed">
+							<label for="filter-fixed">
+								Фиксированная
+							</label>
+						</li>
+						<li class="filter-option">
+							<input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="rubber" id="filter-rubber">
+							<label for="filter-rubber">
+								Резиновая
+							</label>
+						</li>
+					</ul>
+				</fieldset>
 
-					<!-- Фильтр по особенностям -->
-					<fieldset class="filter-features">
-						<legend>Особенности:</legend>
-						<ul>
-							<li>
-								<input type="checkbox" name="slider" id="filter-slider" checked>
-								<label for="filter-slider">
-									Слайдер
-								</label>
-							</li>
-							<li>
-								<input type="checkbox" name="unit-advantages" id="filter-unit-advantages">
-								<label for="filter-unit-advantages">
-									Блок преимуществ
-								</label>
-							</li>
-							<li>
-								<input type="checkbox" name="news" id="filter-news" checked>
-								<label for="filter-news">
-									Новости
-								</label>
-							</li>
+				<!-- Фильтр по особенностям -->
+				<!--fieldset class="filter-features"-->
+				<fieldset class="filter-item">
+					<legend>Особенности:</legend>
+					<ul>
+						<li class="filter-option">
+							<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="slider" id="filter-slider" checked>
+							<label for="filter-slider">
+								Слайдер
+							</label>
+						</li>
+						<li class="filter-option">
+							<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="unit-advantages" id="filter-unit-advantages">
+							<label for="filter-unit-advantages">
+								Блок преимуществ
+							</label>
+						</li>
+						<li class="filter-option">
+							<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="news" id="filter-news" checked>
+							<label for="filter-news">
+								Новости
+							</label>
+						</li>
+						<li class="filter-option">
+							<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="gallery" id="filter-gallery">
+							<label for="filter-gallery">
+								Галерея
+							</label>
+						</li>
+						<li class="filter-option">
+							<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="basket" id="filter-basket">
+							<label for="filter-basket">
+								Корзина
+							</label>
+						</li>
+					</ul>
+				</fieldset>
 
-							<li>
-								<input type="checkbox" name="gallery" id="filter-gallery">
-								<label for="filter-gallery">
-									Галерея
-								</label>
-							</li>
-							<li>
-								<input type="checkbox" name="basket" id="filter-basket">
-								<label for="filter-basket">
-									Корзина
-								</label>
-							</li>
-						</ul>
-					</fieldset>
-
-					<button type="submit">Показать</button> <!-- кнопка «Показать» отвечает за отправку формы по ТЗ-->
-				</form>
-			</div>
+				<button type="submit">Показать</button> <!-- кнопка «Показать» отвечает за отправку формы по ТЗ-->
+			</form>
 		</section>
 	
 		<section class="catalog"> <!-- Каталог class: catalog -->
@@ -138,21 +135,22 @@
 			<div class="catalog-sorting">
 				<p>Соритировать:</p>
 				<ul class="catalog-sorting-list">
-					<li class="catalog-sorting-current"><a href="#">По цене</a></li>
-					<li><a href="#">По типу</a></li>
-					<li><a href="#">По названию</a></li>
-					<li><a href="#">По убыванию</a></li>
-					<li><a href="#">По возрастанию</a></li>
+					<!--li class="catalog-sorting-item catalog-sorting-current"><a href="#">По цене</a></li-->
+					<li class="catalog-sorting-item catalog-sorting-item-current"><a href="#">По цене</a></li>
+					<li class="catalog-sorting-item"><a href="#">По типу</a></li>
+					<li class="catalog-sorting-item"><a href="#">По названию</a></li>
+					<li><a class="catalog-sorting-descending" href="#"><span class="visually-hidden">По убыванию</span></a></li>
+					<li><a class="catalog-sorting-ascending" href="#"><span class="visually-hidden">По возрастанию</span></a></li>
 				</ul>
 			</div>
 
 			<div class="catalog-work">
-			<h2 class="visually-hidden">Каталог наших работы</h2> <!-- class: visually-hidden-->
+			<h2 class="visually-hidden">Каталог наших работы</h2> 
 			<ul class="catalog-list">
 				<li class="catalog-item"> 
 					<a class="catalog-item-link" href="#"> 
 						<img src="img/img-sedona.jpg" width="360" height="576" alt="Sedona">
-						<div class="catalog-item-content">
+						<div class="catalog-item-content"> <!-- class: visually-hidden ЧТОБЫ СНАЧАЛА СКРЫТЬ-->
 							<h3>Sedona</h3>
 							<p> Информационный сайт<br> для туристов </p>
 							<span class="button-price">9 900 руб.</span>
@@ -213,62 +211,62 @@
 			</div>
 			<!-- Пагинация--> 
 			<ul class="pagination-list">
-				<li class="pagination-item"><a href="#">1</a></li>
-				<li class="pagination-item pagination-item-current"><a href="#">2</a></li>
+				<li class="pagination-item pagination-item-current"><a href="#">1</a></li>
+				<li class="pagination-item"><a href="#">2</a></li>
 				<li class="pagination-item"><a href="#">3</a></li>
 				<li class="pagination-item"><a href="#">Следующая</a></li>
 			</ul>
 		</section>
 	</div>
 		
-	<section>
+	<section class="map">
 		<!-- Блок Адрес студии: карта-->
-		<div class="map-wrapper">
-			<div class="map">
-				<img src="img/map.png" width="1440" height="416" alt="Офис компании по адресу: 191186, Санкт-Петербург,	ул. Б. Конюшенная, д. 19/8" >
-			</div>
-			<div class="map-marker">
-				<img src="img/map-marker.png" width="231" height="190" alt="Метка студии на карте" >
-			</div>
+		<img src="img/map.png" width="1440" height="416" alt="Офис компании по адресу: 191186, Санкт-Петербург,	ул. Б. Конюшенная, д. 19/8" >
+		<div class="map-marker">
+			<img src="img/map-marker.png" width="231" height="190" alt="Метка студии на карте" >
 		</div>
-		
+
 		<!-- Блок Адрес студии -->
 		<div class="contact-info">
 			<h3>NЁRDS DESIGN STUDIO</h3>
-			<p>
+			<p class="contact-info-adress">
 				191186, Санкт-Петербург,<br> 
 				ул. Б. Конюшенная, д. 19/8
-      </p>
-      <p>
+			</p>
+			<p class="contact-info-tel">
 				тел. <a href="tel:=+78122757575">+7 (812) 275-75-75</a>
-      </p>
-			<!-- Напишите нам -->
-      <button class="button-contact-us" type="button">Напишите нам</button>
+			</p>
+			<!-- Напишите нам кнопка-->
+			<button class="button-contact-us" type="button">Напишите нам</button>
 		</div>
-		<div>
+
+		<!-- Напишите нам форма-->
+		<div class="form-letter">
 			<form action="https://echo.htmlacademy.ru/courses" method="post">
-        <fieldset>
-          <legend>Напишите нам</legend>
-          <div class="half-width">
-            <label for="name">Ваше имя:</label>
-            <input type="text" id="name" name="name" value="" placeholder="Имя Фамилия" required>
-          </div>
-					<div class="half-width">
-            <label for="email">Ваш e-mail:</label>
-            <input type="email" id="email" name="email" placeholder="email@example.com" required>
-          </div>
-					<div>
-						<label for="letter">Текст письма:</label>
-						<textarea rows="5" id="letter" name="letter" placeholder="В свободной форме" required></textarea>
+				<fieldset>
+					<legend>Напишите нам</legend>
+					<div class="form-letter-info">
+						<div class="form-letter-name">
+							<label for="name">Ваше имя:</label>
+							<input type="text" id="name" name="name" value="" placeholder="Имя Фамилия" required>
+						</div>
+						<div class="form-letter-email">
+							<label for="email">Ваш e-mail:</label>
+							<input type="email" id="email" name="email" placeholder="email@example.com" required>
+						</div>
 					</div>
-        </fieldset>
+					<div class="form-letter-text">
+						<label for="letter">Текст письма:</label>
+						<textarea id="letter" name="letter" placeholder="В свободной форме" required></textarea>
+					</div>
+				</fieldset>
 				<div>
-          <input type="submit" value="Отправить">
-        </div>
+					<input type="submit" value="Отправить">
+				</div>
 			</form>
-			<button type="button">
-      	Закрыть
-      </button>
+			<button class="button-close" type="button">
+				<span class="visually-hidden">Закрыть</span>
+			</button>
 		</div>
 	</section>
 </main>
