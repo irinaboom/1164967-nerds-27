@@ -202,7 +202,7 @@
 						<img src="img/img-kvast.jpg" width="360" height="576" alt="Кваст"> 
 						<div class="catalog-item-content">
 							<h3>Кваст</h3>
-							<p> Промо-сайт производителя<br> крафтового кваса </p>
+							<p> Промо-сайт производителя<br> крафтового кваса</p>
 							<span class="button-price">9 900 руб.</span> 
 						</div>
 					</a>
@@ -239,35 +239,6 @@
 			<!-- Напишите нам кнопка-->
 			<button class="button-contact-us" type="button">Напишите нам</button>
 		</div>
-
-		<!-- Напишите нам форма-->
-		<div class="form-letter">
-			<form action="https://echo.htmlacademy.ru/courses" method="post">
-				<fieldset>
-					<legend>Напишите нам</legend>
-					<div class="form-letter-info">
-						<div class="form-letter-name">
-							<label for="name">Ваше имя:</label>
-							<input type="text" id="name" name="name" value="" placeholder="Имя Фамилия">
-						</div>
-						<div class="form-letter-email">
-							<label for="email">Ваш e-mail:</label>
-							<input type="email" id="email" name="email" placeholder="email@example.com">
-						</div>
-					</div>
-					<div class="form-letter-text">
-						<label for="letter">Текст письма:</label>
-						<textarea id="letter" name="letter" placeholder="В свободной форме"></textarea>
-					</div>
-				</fieldset>
-				<div>
-					<input type="submit" value="Отправить">
-				</div>
-			</form>
-			<button class="button-close" type="button">
-				<span class="visually-hidden">Закрыть</span>
-			</button>
-		</div>
 	</section>
 </main>
 	
@@ -299,5 +270,37 @@
 	</div>
 </footer>
 
+<section class="modal-letter">
+	<!-- Напишите нам форма-->
+	<form action="https://echo.htmlacademy.ru/courses" method="post">
+		<fieldset>
+			<legend>Напишите нам</legend>
+			<div class="modal-letter-info">
+				<div class="modal-letter-name">
+					<label for="name">Ваше имя:</label>
+					<input type="text" id="name" name="name" value="" placeholder="Имя Фамилия">
+					<!--input type="text" id="name" name="name" value="" placeholder="Имя Фамилия" required-->
+				</div>
+				<div class="modal-letter-email">
+					<label for="email">Ваш e-mail:</label>
+					<input type="email" id="email" name="email" placeholder="email@example.com">
+					<!--input type="email" id="email" name="email" placeholder="email@example.com" required-->
+				</div>
+			</div>
+			<div class="modal-letter-text">
+				<label for="letter">Текст письма:</label>
+				<textarea id="letter" name="letter" placeholder="В свободной форме"></textarea>
+				<!--textarea id="letter" name="letter" placeholder="В свободной форме" required></textarea-->
+			</div>
+		</fieldset>
+		<div>
+			<input type="submit" value="Отправить">
+		</div>
+	</form>
+	<button class="button-close" type="button">
+		<span class="visually-hidden">Закрыть</span>
+	</button>
+</section>		
+	
 </body>
 </html>

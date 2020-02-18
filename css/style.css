@@ -231,7 +231,6 @@ input[type="radio"].visually-hidden {
 	display: inline-block;
 	padding: 16px 23px 16px 22px;
   width: 240px;
-	/*height: 50px;*/
 
   font-weight: 500;
   line-height: 18px;
@@ -302,7 +301,7 @@ input[type="radio"].visually-hidden {
 	padding: 0;
 }
 
-.features-list li:last-child {
+.features-list li:nth-child(3n) {
 	margin-right: 60px;
 }
 
@@ -499,8 +498,8 @@ input[type="radio"].visually-hidden {
 	padding-top: 46px; 
 	padding-bottom: 40px;
 	display: flex;
-  /*jjustify-content: space-between;*/
-	ustify-content: flex-start;
+  /*justify-content: space-between;*/
+	justify-content: flex-start;
 	
 	list-style: none;
 	
@@ -523,26 +522,18 @@ input[type="radio"].visually-hidden {
 
 .partners-item-htmlacademy { 
 	width: 280px;
-	margin-left: 30px;
-	margin-right: 50px;
 }
 
 .partners-item-barbershop {
 	width: 300px;
-	margin-left: 45px;
-	margin-right: 46px;
 }
 
 .partners-item-pink {
 	width: 300px;
-	margin-left: 57px;
-	margin-right: 58px;
 }
 
 .partners-item-mishka {
 	width: 280px;
-	margin-left: 53px;
-	margin-right: 54px;
 }
 
 /*.partners-item {
@@ -657,7 +648,7 @@ input[type="radio"].visually-hidden {
 .range-controls {
   position: relative;
   
-  height: 41px;
+  height: 82px; /* ПЕРЕПИСАЛА ГОТОВЫЙ КОД. БЫЛО: height: 41px;  */
   margin-bottom: 15px;
   padding-top: 39px;
   padding-right: 20px;
@@ -685,15 +676,23 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 31px;
   left: 0;
+	
+	width: 20px;
+  height: 23px;
+  padding: 0;
+	
+	background-image: url("../img/filter-button.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
   
-  width: 4px;
+  /*width: 4px;
   height: 4px;
   padding: 0;
 
   border: 8px solid #ffffff;
   background-color: #ababab;
   box-shadow: 0 2px 1px 0 #cfcfcf;
-  border-radius: 50%;
+  border-radius: 50%;*/
   cursor: pointer;
 }
 
@@ -1308,8 +1307,10 @@ input[type="radio"].visually-hidden {
 }
 
 /* Форма Написать письмо нам*/
-.form-letter {
-	position: absolute;
+.modal-letter {
+	display: none;
+	
+	position: fixed;
 	
 	top: 50%;
   left: 50%;
@@ -1325,13 +1326,13 @@ input[type="radio"].visually-hidden {
 	box-shadow: -20px 0px 40px 0px rgba(0, 1, 1, 0.75);
 }
 
-.form-letter fieldset{
+.modal-letter fieldset{
 	border: none;
 	margin:0 ;
 	padding: 0;
 }
 
-.form-letter legend {
+.modal-letter legend {
 	margin: 0;
 	padding: 0;
 	
@@ -1340,7 +1341,7 @@ input[type="radio"].visually-hidden {
 	line-height: 45px;
 }
 
-.form-letter label {
+.modal-letter label {
 	margin: 0;
 	padding: 0;
 	padding-top: 36px;
@@ -1350,19 +1351,19 @@ input[type="radio"].visually-hidden {
 	line-height: 18px;
 }
 
-.form-letter-info {
+.modal-letter-info {
 	display: flex;
 	justify-content: space-between;
 }
 
-.form-letter-name,
-.form-letter-email {
+.modal-letter-name,
+.modal-letter-email {
 	display: flex;
 	flex-direction: column;
 }
 
-.form-letter-name input,
-.form-letter-email input {
+.modal-letter-name input,
+.modal-letter-email input {
 	padding-left: 13px;
 	width: 360px;
 	height: 50px;
@@ -1376,8 +1377,8 @@ input[type="radio"].visually-hidden {
 	border-radius: 3px;
 }
 
-.form-letter-name input:hover,
-.form-letter-email input:hover {
+.modal-letter-name input:hover,
+.modal-letter-email input:hover {
   border: 2px solid #b4b9bb;
 }
 
@@ -1388,27 +1389,27 @@ input[type="radio"].visually-hidden {
   border: 2px solid #000000; 
 }
 
-.form-letter-name input:invalid,
-.form-letter-email input:invalid {
+.modal-letter-name input:invalid,
+.modal-letter-email input:invalid {
   outline: none; 
 	background-color: #ffffff;
   border: 2px solid #e74246; /* ????? ПОЧЕМУ ОНИ СРАЗУ КРАСНЫЕ?????*/
 }
 
-.form-letter-text {
+.modal-letter-text {
 	margin: 0;
 	padding: 0;
 	margin-top: 36px;
 }
 
-.form-letter-text label {
+.modal-letter-text label {
 	display: block;
 	margin: 0;
 	margin-bottom: 9px;
 	padding: 0; 
 }
 
-.form-letter-text textarea {
+.modal-letter-text textarea {
 	margin: 0;
 	pading: 0;
 	padding-left: 13px;
@@ -1425,20 +1426,20 @@ input[type="radio"].visually-hidden {
   resize: none; /* Запрещаем изменять размер */
 }
 
-.form-letter-text textarea:hover {
+.modal-letter-text textarea:hover {
 	outline: none;
 	background-color: #ffffff;
   border: 2px solid #b4b9bb;  
 }
 
-.form-letter-text textarea:focus {
+.modal-letter-text textarea:focus {
 	outline: none;
 	background-color: #ffffff;
   border: 2px solid #000000;  
 }
 
 /* Кнопка Отправить */
-.form-letter input[type="submit"] {
+.modal-letter input[type="submit"] {
 	display: inline-block;
 	margin: 0;
 	margin-top: 40px;
@@ -1458,12 +1459,12 @@ input[type="radio"].visually-hidden {
 	border-radius: 3px;
 }
 
-.form-letter input[type="submit"]:hover,
-.form-letter input[type="submit"]:focus {
+.modal-letter input[type="submit"]:hover,
+.modal-letter input[type="submit"]:focus {
   background-color: #e74246;
 }
 
-.form-letter input[type="submit"]:active {
+.modal-letter input[type="submit"]:active {
 	color: rgba(255, 255, 255, 0.3); 
 	
   background-color: #d7373b;
