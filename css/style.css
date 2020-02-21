@@ -24,6 +24,8 @@ body {
 }
 
 body {
+	/*overflow: auto;*/
+	
   margin: 0;
   padding: 0;
 
@@ -1213,6 +1215,7 @@ input[type="radio"].visually-hidden {
 	margin-top: 80px;
 	/*width: 1440px;*/
 	width: 100%;
+	overflow: auto;
 }
 
 .map-marker {
