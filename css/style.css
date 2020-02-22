@@ -199,11 +199,12 @@ input[type="radio"].visually-hidden {
 /* MAIN INDEX */
 /* SLIDER */
 .slider-wrapper {
-  min-width: 940px;
+  min-width: 1160px;
+	height: 430px;
   background-color: #eeeeee;
   background-image: url("../img/slide1.png");
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: bottom right;
   
   transition: background-image 0.5s ease, background-color 0.5s ease;
 }
@@ -305,9 +306,10 @@ input[type="radio"].visually-hidden {
 
 .slider-controls {
   position: absolute;
-  bottom: 98px;
+  bottom: 9px;
   /*left: 0;*/
 	left: 50%;
+	margin-left: -43px;
   z-index: 20;
   
   font-size: 0;
@@ -350,8 +352,12 @@ input[type="radio"].visually-hidden {
 	width: 18px;
   height: 18px;
 	
-	background-color: #c1c1c1; /* загрузить картинкой потом */
-	box-shadow: inset 0 0 0 4px #ffffff;
+	background-color: #c1c1c1; 
+	background-image: url("../img/slider-radio-on.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+	/*background-color: #c1c1c1; /* загрузить картинкой потом */
+	/*box-shadow: inset 0 0 0 4px #ffffff;*/
 }
 
 /* FEATURES */
@@ -1155,6 +1161,8 @@ input[type="radio"].visually-hidden {
 	display: flex;
 	flex-direction: column;
 	padding-top: 27px;
+	padding-right: 60px; /* чтобы текст не упирался в края */
+	padding-left: 60px;
 	
 	position: absolute;
 	
@@ -1288,8 +1296,8 @@ input[type="radio"].visually-hidden {
 	position: relative;
 	margin: 0 auto;
 	margin-top: 80px;
-	/*width: 1440px;*/
-	width: 100%;
+	width: 1440px;
+	/*width: 100%;*/
 	overflow: auto;
 }
 
