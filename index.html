@@ -6,7 +6,6 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
 <link href="css/normalize.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
-<script src="js/script.js"></script>
 </head>
 <body>
 <header class="header">
@@ -27,46 +26,77 @@
 </header>
 	
 <main> 
-  <h1 class="visually-hidden">Нёрдс</h1> <!-- class: visually-hidden-->
+  <h1 class="visually-hidden">Нёрдс</h1> 
 	<!-- Слайдер -->
-	<section class="slider">
+	<input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+  <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+  <input class="visually-hidden" type="radio" id="product-3" name="tosggle">
+	<div class="slider-wrapper">
 		<div class="container">
-			<div class="slider-list">
-				<div class="slider-item">
-					<div class="slider-item-text-slide1"> <!-- пока не использую этот класс (наверно изображение - это фоновая картинка)-->
-						<label for="slide1">Долго, дорого,<br>скрупулезно.</label>
+			<section class="slider">
+				<div class="slider-controls">
+					<label for="product-1">Первый</label>
+					<label for="product-2">Второй</label>
+					<label for="product-3">Третий</label>
+				</div>
+				<ul class="slider-list">
+					<li class="slider-item slide" id="slide1">
+						<h3 class="slide-title">Долго, дорого,<br>скрупулезно.</h3>
 						<p>Математически выверенный дизайн<br>
-						для вашего сайта или мобильного приложения.</p>
-						<a href="#">Узнать больше</a>
-					</div>
-					<img src="img/slide1.png" width="698" height="413" alt=" ">
-				</div>
-				<div class="slider-item">
-					<div class="slider-item-text-slide2"> 
-						<label for="slide2">Любим математику<br> как никто другой</label>
+							для вашего сайта или мобильного приложения.</p>
+						<a class="button slide-button" href="#">Узнать больше</a>
+					</li>
+					<li class="slider-item slide" id="slide2">
+						<h3 class="slide-title">Любим математику<br> как никто другой</h3>
 						<p>Никакого креатива, только математические формулы<br> 
-						для расчета идеальных пропорций.</p>
-						<a href="#">Узнать больше</a>
+							для расчета идеальных пропорций.</p>
+						<a class="button slide-button" href="#">Узнать больше</a>
+					</li>
+					<li class="slider-item slide" id="slide3">
+						<h3 class="slide-title">Только ночь,<br>только хардкор</h3>
+						<p>Никакого креатива, только математические формулы<br> 
+							для расчета идеальных пропорций.</p>
+						<a class="button slide-button" href="#">Узнать больше</a>
+					</li>
+				</ul>
+
+				<!--div class="slider-list">
+					<div class="slider-item">
+						<div class="slider-item-text-slide1"> 
+							<label for="slide1">Долго, дорого,<br>скрупулезно.</label>
+							<p>Математически выверенный дизайн<br>
+							для вашего сайта или мобильного приложения.</p>
+							<a href="#">Узнать больше</a>
+						</div>
+						<img src="img/slide1.png" width="698" height="413" alt=" ">
 					</div>
-					<img src="img/slide2.png" width="663" height="430" alt=" ">
-				</div>
-				<div class="slider-item">
-					<div class="slider-item-text-slide3"> 
-						<label for="slide3">Только ночь,<br>только хардкор</label>
-						<p>Работать днем, как все? Мы против этого.<br>
-						Ближе к полуночи работа только начинается.</p>
-						<a href="#">Узнать больше</a>
+					<div class="slider-item">
+						<div class="slider-item-text-slide2"> 
+							<label for="slide2">Любим математику<br> как никто другой</label>
+							<p>Никакого креатива, только математические формулы<br> 
+							для расчета идеальных пропорций.</p>
+							<a href="#">Узнать больше</a>
+						</div>
+						<img src="img/slide2.png" width="663" height="430" alt=" ">
 					</div>
-					<img src="img/slide3.png" width="759" height="411" alt=" ">
+					<div class="slider-item">
+						<div class="slider-item-text-slide3"> 
+							<label for="slide3">Только ночь,<br>только хардкор</label>
+							<p>Работать днем, как все? Мы против этого.<br>
+							Ближе к полуночи работа только начинается.</p>
+							<a href="#">Узнать больше</a>
+						</div>
+						<img src="img/slide3.png" width="759" height="411" alt=" ">
+					</div>
 				</div>
-			</div>
-			<div class="slider-radio">
-				<input class="slider-radio-item slider-radio-item-1" type="radio" name="point" id="slide1" checked>
-				<input class="slider-radio-item slider-radio-item-2" type="radio" name="point" id="slide2">
-				<input class="slider-radio-item slider-radio-item-3" type="radio" name="point" id="slide3">
-			</div>
-		</div>	
-	</section>
+				<div class="slider-radio">
+					<input class="visually-hidden slider-radio-item" type="radio" name="point" id="slide1" checked>
+					<input class="slider-radio-item" type="radio" name="point" id="slide2">
+					<input class="slider-radio-item" type="radio" name="point" id="slide3">
+				</div-->
+			</section>
+		</div>
+	</div>
 	
 	<section class="features container">
 		<h2 class="visually-hidden">Виды наших работ</h2> <!-- class: visually-hidden-->
@@ -225,6 +255,6 @@
 		<span class="visually-hidden">Закрыть</span>
 	</button>
 </section>	
-
+<script src="js/script.js"></script>
 </body>
 </html>
